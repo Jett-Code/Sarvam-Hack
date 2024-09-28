@@ -38,9 +38,6 @@ app.get('/', (req, res) => {
     res.send('Server is running');
 });
 
-app.post('/', (req, res) => {
-    console.log('Request received:', req.body);
-});
 
 // Route to upload video
 app.post('/api/upload', upload.single('video'), async (req, res) => {
@@ -56,7 +53,7 @@ app.post('/api/upload', upload.single('video'), async (req, res) => {
 
         // Call all services
         const videoAnalysisResponse = await axios.post('http://localhost:3000/api/video-analysis/analyze', { videoUrl });
-        const multilingualResponse = await axios.post('http://localhost:3000/api/multilingual/translate', { text: videoTitle, language: 'en' });
+        const multilingualResponse = await axios.post('http://localhost:3000/api/multilingual/convert', { text: videoTitle, language: 'en' }); //not text but audio
 
         // Add more service calls as needed...
 
