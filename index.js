@@ -60,29 +60,29 @@ app.post("/api/upload", upload.single("video"), async (req, res) => {
     //   { videoUrl }
     // );
 
-    // const convertResponse = await axios.post(
-    //   "http://localhost:3000/api/multilingual/convert",
-    //   {
-    //     videoUrl: videoUrl,
-    //     language: "en",
-    //   }
-    // );
-
-    const addPhotoResponse = await axios.post(
-      "http://localhost:3000/api/dynamic-content/addphoto",
+    const convertResponse = await axios.post(
+      "http://localhost:3000/api/multilingual/convert",
       {
         videoUrl: videoUrl,
-        prompt: "hello add photo",
-        timestamp: 5,
+        language: "en",
       }
     );
+
+    // const addPhotoResponse = await axios.post(
+    //   "http://localhost:3000/api/dynamic-content/addphoto",
+    //   {
+    //     videoUrl: videoUrl,
+    //     prompt: "hello add photo",
+    //     timestamp: 5,
+    //   }
+    // );
     // Add more service calls as needed...
 
     res.json({
       message: "Video processed successfully",
       //   videoAnalysis: videoAnalysisResponse.data,
-      // translation: convertResponse.data,
-      addPhotoResponse: addPhotoResponse.data,
+      translation: convertResponse.data,
+      // addPhotoResponse: addPhotoResponse.data,
       // Include responses from other services
     });
   } catch (error) {
