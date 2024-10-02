@@ -7,6 +7,7 @@ const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 const ffmpeg = require("fluent-ffmpeg");
 ffmpeg.setFfmpegPath(ffmpegPath);
 const router = express.Router();
+const img = require("Images")
 
 // Endpoint to get dynamic content
 router.get("/content", (req, res) => {
@@ -24,6 +25,7 @@ router.post("/addphoto", async (req, res) => {
       .send("Missing parameters: videoUrl, prompt, or timestamp");
   }
 
+  // const photoUrl =  img.generateAndSaveImage(prompt);
   const photoUrl =
     "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSC-tzajqpca4dchoeTCp8ChzFqdXnSnKtpkbx_5arltgIZQDdV4ALDa2ojaIHmI0GE";
   const videoPath = path.resolve(videoUrl);
