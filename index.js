@@ -80,8 +80,8 @@ app.post("/api/upload", upload.single("video"), async (req, res) => {
 
     res.json({
       message: "Video processed successfully",
-      //   videoAnalysis: videoAnalysisResponse.data,
-      translation: convertResponse.data,
+      translation: convertResponse.data.transcript,
+      videoUrl: videoUrl,
       // addPhotoResponse: addPhotoResponse.data,
       // Include responses from other services
     });
