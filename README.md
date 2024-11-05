@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/e0488aa7-b797-4dcf-952e-e1ad084614f5
 # The current scope includes:
 1. Video upload functionality for instructors
 2. Automated translation of audio content to multiple Indian languages using Sarvam APIs
@@ -25,3 +27,13 @@ Using Sarvam's API to address the boundary condition was the main issue. Learnin
 # links
 1. https://github.com/Jett-Code/sarvam-frontend
 2. https://huggingface.co/spaces/projektkush/googleaisarvam/tree/main
+
+# Example Gallery
+
+
+https://github.com/user-attachments/assets/52230e18-65e6-4e22-8b5b-61a589a0f8ff
+
+
+
+
+
